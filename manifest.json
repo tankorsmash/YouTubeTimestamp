@@ -17,13 +17,13 @@
         // Optional
         "author": "Tankor Smash",
         "background": {
-            "scripts": ["scripts/jquery-2.1.1.min.js", "scripts/ytt.js"]
+            "scripts": ["scripts/jquery-2.1.1.min.js", "scripts/ytt.js", "scripts/purl.js"]
         },
         // "chrome_settings_overrides": {...},
         "content_scripts": [{
                 "matches": ["https://www.youtube.com/*", "http://www.youtube.com/*"],
                 //         // "css": ["mystyles.css"],
-                        "js": ["scripts/jquery-2.1.1.min.js", "scripts/content_ytt.js"]
+                        "js": ["scripts/jquery-2.1.1.min.js", "scripts/content_ytt.js", "scripts/purl.js"]
         }],
         "permissions": [
             "clipboardWrite", 
