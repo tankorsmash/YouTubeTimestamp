@@ -1,28 +1,19 @@
 {
-    // Required
     "manifest_version": 2,
     "name": "YouTube TimeStamper",
     "version": "0.0.1",
 
-    // Recommended
-    "description": "Takes a link to the video you're currently watching and adds a timestamp. Great for submitting to subreddits that require a timestamp!",
+    "description": "Takes a link to the current video and adds a timestamp. Great for submitting to subreddits that require a timestamp",
     "icons": { "16": "icon16.png",
         "48": "icon48.png",
         "128": "icon128.png" },
 
-        // Pick one (or none)
-        // "browser_action": {...},
-        // "page_action": {...},
-
-        // Optional
         "author": "Tankor Smash",
         "background": {
             "scripts": ["scripts/jquery-2.1.1.min.js", "scripts/ytt.js", "scripts/purl.js"]
         },
-        // "chrome_settings_overrides": {...},
         "content_scripts": [{
                 "matches": ["https://www.youtube.com/*", "http://www.youtube.com/*"],
-                //         // "css": ["mystyles.css"],
                         "js": ["scripts/jquery-2.1.1.min.js", "scripts/content_ytt.js", "scripts/purl.js"]
         }],
         "permissions": [
@@ -32,13 +23,9 @@
         ],
         "short_name": "YT Timestamper",
         "browser_action": {
-            "default_icon": {                    // optional
-                "19": "icon19.png",           // optional
-                "38": "icon38.png"            // optional
+            "default_icon": {                    
+                "19": "icon19.png",           
+                "38": "icon38.png"           
             }
-            // "default_title": "Google Mail"      // optional; shown in tooltip
-            // "default_popup": "popup.html"        // optional
         }
-
-
 }
