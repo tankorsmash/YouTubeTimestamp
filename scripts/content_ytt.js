@@ -11,8 +11,10 @@ get_selection = function() {
 $(function() {
 
     if ($("#player").length) {
-        $("#player").prepend("<a id='copylink'>Copy timestamp</a>")
-        $("#copylink").click(send_selection);
+        $("#watch-header").prepend("<a style='color:#222;' class='    yt-card yt-card-has-padding' id='submit-link'>submit</a> ")
+        $("#watch-header").prepend("<a style='color:#222;' class='    yt-card yt-card-has-padding' id='copy-link'>Copy timestamp</a> ")
+        $("#copy-link").click(send_selection);
+        $("#submit-link").click(submit_link);
     }
     else {
         console.log("no player found");
@@ -30,6 +32,12 @@ function get_player_time()  {
     var final_url = url + "#t=" + time_sec;
     return final_url;
 }
+
+function submit_link(e) {
+    var url = get_player_time();
+    var final_url = "http://reddit.com/submit?url="+encodeURIComponent(url)+"&title="+encodeURIComponent(document.title);
+    window.open(final_url,'_blank');
+};
 
 function send_selection(e)  {
 

@@ -1,9 +1,9 @@
 {
     "manifest_version": 2,
     "name": "YouTube TimeStamper",
-    "version": "0.0.1",
+    "version": "0.0.3",
 
-    "description": "Takes a link to the current video and adds a timestamp. Great for submitting to subreddits that require a timestamp",
+    "description": "Takes a link to the current video and adds a timestamp. Great for submitting to subreddits that require a timestamp.",
     "icons": { "16": "icon16.png",
         "48": "icon48.png",
         "128": "icon128.png" },
@@ -18,8 +18,7 @@
         }],
         "permissions": [
             "clipboardWrite", 
-            "clipboardRead",
-            "tabs"
+            "clipboardRead"
         ],
         "short_name": "YT Timestamper",
         "browser_action": {
